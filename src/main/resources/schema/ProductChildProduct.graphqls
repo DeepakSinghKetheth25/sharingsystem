@@ -1,0 +1,8 @@
+type ProductChildProduct {
+    publishStatus: EPublishStatus
+    globalPublishStatus: EPublishStatus
+    order: Int
+    quantity: Int
+    status: EStatus
+    childProduct: BaseProduct!
+}

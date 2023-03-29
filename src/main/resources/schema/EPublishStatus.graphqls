@@ -1,0 +1,4 @@
+enum EPublishStatus {
+    UNPUBLISHED
+    PUBLISHED
+}

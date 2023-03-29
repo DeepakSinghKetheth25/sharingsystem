@@ -1,0 +1,7 @@
+enum ERole {
+    USER
+    MENTOR
+    ADMIN
+    SALES
+    SALES_ADMIN
+}

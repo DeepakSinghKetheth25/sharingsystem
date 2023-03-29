@@ -1,0 +1,19 @@
+type Query {
+
+    # Organisation
+    organisations: [Organisation]
+    organisation(organisationId: String!): Organisation
+
+
+    #User
+    users: [User]
+    getUser(userId: String!): User
+    getUserWithOKID(OKID: String!): User
+
+    # Organisation Product
+    organisationProduct(organisationId: String!, productId: String!): OrganisationProduct
+    getAllOrganisationProducts(organisationId: String!): [OrganisationProduct]
+#    product(productId: String!): Product
+#    productWithREFID(REFID: String!): Product
+
+}

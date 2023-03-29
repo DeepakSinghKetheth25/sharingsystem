@@ -1,0 +1,12 @@
+type OrganisationProduct {
+
+    id: ID!
+    organisationId: String!
+    status: EStatus
+    publishStatus: EPublishStatus
+	globalPublishStatus: EPublishStatus
+	order: String
+	quantity: Int
+    product: BaseProduct
+
+}

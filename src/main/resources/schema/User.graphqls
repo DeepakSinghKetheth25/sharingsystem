@@ -1,0 +1,18 @@
+type User {
+    id: ID!
+    OKID: String
+    name: String
+    email: String
+    mobile: String
+    mobileCountryCode: String
+    status: EStatus
+    roleList: [ERole]
+#    organisationList: [Organisation]
+#    ownedOrganisationList: [Organisation]
+#    managedOrganisationList: [Organisation]
+#    memberOrganisationList: [Organisation]
+#    organisationInviteList: [Organisation]
+#    organisationInviteBlockedList: [Organisation]
+#    joinRequestOrganisationList: [Organisation]
+
+}

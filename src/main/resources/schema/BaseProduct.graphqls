@@ -1,0 +1,14 @@
+type BaseProduct {
+
+	id: String!
+	name: String!
+	REFID: String,
+	SKUID: String,
+	organisationId: String!
+	profitMargin: String
+	status: EStatus
+	publishStatus: EStatus
+	totalLogs: Int
+	subProductList: [ProductChildProduct]
+
+}

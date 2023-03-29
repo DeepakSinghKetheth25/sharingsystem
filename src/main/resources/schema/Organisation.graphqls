@@ -1,0 +1,35 @@
+directive @auth(role: String!) on FIELD_DEFINITION
+
+type Organisation {
+
+    id: ID!
+    OKID: String
+    status: String
+    name: String
+    publicMobileCountryCode: String
+    publicMobile: String
+    publicEmail: String
+    websiteURL: String 
+    address: Address @auth(role:  "ORGANISATION_MANAGER")
+    organisationType: EOrganisationGroup
+    userList: [User]
+    managerList: [User]
+    ownerList: [User]
+    inviteUserList: [User]
+    inviteManagerList: [User]
+    userJoinRequestList: [User]
+    userJoinRequestBlockedList: [User]
+    type: EOrganisationType
+    permissionList: [EOrganisationPermission]
+
+}
+
+type Address {
+    line1: String
+    line2: String
+    postalCode: String
+    city: String
+    province: String
+    countryCode: ECountryCode
+    country: String
+}

@@ -1,0 +1,80 @@
+type Mutation  {
+
+	# Organisation
+	createOrganisation(createOrganisationInput: CreateOrganisationInput!): Organisation
+	
+    # User
+    createUser(user: UserInput): User
+
+    # Product
+    createProduct(organisationProduct: OrganisationProductInput) : OrganisationProduct
+
+}
+
+input AddressInput {
+
+	line1: String
+	line2: String
+	postalCode: String
+	city: String
+	province: String
+	countryCode: ECountryCode
+	country: String!
+}
+
+input CreateOrganisationInput{
+	OKID: String!
+    status: String
+    name: String!
+    userId: String!
+    publicMobileCountryCode: String
+    publicMobile: String
+    publicEmail: String
+    websiteURL: String
+    address: AddressInput
+    type: EOrganisationType
+}
+
+
+input UserInput {
+
+    OKID: String!
+    name: String!
+    email: String
+    mobile: String
+    mobileCountryCode: String
+    roleList: [ERole]
+
+}
+
+input ChildProductInput {
+
+    id: String!
+    organisationId: String!
+    order: String
+    quantity: Int
+
+}
+
+input BaseProductInput {
+
+    REFID: String!
+    SKUID: String
+    name: String!
+    organisationId: String!
+    profitMargin: String!
+    status: EStatus
+    publishStatus: EPublishStatus
+    subProductList: [ChildProductInput]
+}
+
+input OrganisationProductInput {
+
+	organisationId: String!
+    publishStatus: EPublishStatus
+    globalPublishStatus: EPublishStatus
+    order: String
+    quantity: Int
+    status: EStatus
+    product: BaseProductInput
+}

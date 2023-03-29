@@ -1,0 +1,7 @@
+enum EStatus {
+    PENDING
+    INACTIVE
+    INPROGRESS
+    ACTIVE
+    BLOCKED
+}
